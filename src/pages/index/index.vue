@@ -1,24 +1,56 @@
 <template>
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
-		<view>
-			<text class="title">{{title}}</text>
-		</view>
+		<input type="text" v-model="secretKey" placeholder="请先输入secretKey" />
+		<input type="text" v-model="accessKey" placeholder="请先输入accessKey" />
+		<button size="mini" :disabled="false" hover-start-time=20 @click="handleClick">选择文件</button>
 	</view>
 </template>
-
 <script>
+	import TokenTools from '../../utlis/token'
+	import * as qiniu from 'qiniu-js'
+	function handleUpload(file, accessKey, secretKey) {
+				const observer = {
+					next(res){},
+					error(res){
+						console.log(res);
+					},
+					complete(res){
+						alert('上传成功',res)
+					}
+				}
+				const token = TokenTools.genUpToken(accessKey, secretKey,{
+					scope: 'append-test',
+					deadline: Math.floor(Date.now() / 1000) + 3600
+					})
+				const observable = qiniu.upload(file, null, token)
+				const subscription = observable.subscribe(observer)
+			}
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				accessKey: '',
+				secretKey: ''
 			}
 		},
 		onLoad() {
-
+			
 		},
 		methods: {
-
+			handleClick() {
+				const ak = this.accessKey
+				const sk = this.secretKey
+				// 选择图片文件
+				uni.chooseFile({
+					count: 1,
+					type: 'image',
+					success (res) {
+						const tempFilePaths = res.tempFiles
+						handleUpload(tempFilePaths[0], ak, sk)
+					}
+				})
+			}
 		}
 	}
 </script>

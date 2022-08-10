@@ -932,6 +932,14 @@
     pirates "^4.0.5"
     source-map-support "^0.5.16"
 
+"@babel/runtime-corejs2@^7.10.2":
+  version "7.18.9"
+  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs2/-/runtime-corejs2-7.18.9.tgz#d88c327736ecc4b9db13ddef5a33a004b9aeac74"
+  integrity sha512-l057ZarpDX2QnXM89ViR2BgRFgTy2l5UFGDt0SbInhim1N/ljBgPeTJV0kRG1/Bo7CkHfYfrNNwTeQ2CPph9xQ==
+  dependencies:
+    core-js "^2.6.12"
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.11.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.8.4", "@babel/runtime@~7.17.9":
   version "7.17.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.9.tgz#d19fbf802d01a8cb6cf053a64e472d42c434ba72"
@@ -3713,6 +3721,11 @@ core-js-compat@^3.21.0, core-js-compat@^3.22.1, core-js-compat@^3.6.5:
     browserslist "^4.21.3"
     semver "7.0.0"
 
+core-js@^2.6.12:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
+  integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
+
 core-js@^3.6.5:
   version "3.24.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.24.1.tgz#cf7724d41724154010a6576b7b57d94c5d66e64f"
@@ -3824,6 +3837,11 @@ crypto-browserify@^3.11.0:
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
     randomfill "^1.0.3"
+
+crypto-js@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.1.1.tgz#9e485bcf03521041bd85844786b83fb7619736cf"
+  integrity sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==
 
 css-color-names@0.0.4, css-color-names@^0.0.4:
   version "0.0.4"
@@ -8726,6 +8744,15 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==
 
+qiniu-js@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/qiniu-js/-/qiniu-js-3.4.1.tgz#0d258771164fac5d92df1797d1c55e38db934a57"
+  integrity sha512-8vxrLqDPlJUk3fUAaTozh3TAT3ww9B5KqGogmGuTiFHnewXDoMxTCSY5z8Ab5UNdrCo6ZxDM07G/o++CICRUFw==
+  dependencies:
+    "@babel/runtime-corejs2" "^7.10.2"
+    querystring "^0.2.1"
+    spark-md5 "^3.0.0"
+
 qr-image@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/qr-image/-/qr-image-3.2.0.tgz#9fa8295beae50c4a149cf9f909a1db464a8672e8"
@@ -8777,6 +8804,11 @@ querystring@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
   integrity sha512-X/xY82scca2tau62i9mDyU9K+I+djTMUsvwf7xnUX5GLvVzgJybOJf4Y6o9Zx3oJK/LSXg5tTZBjwzqVPaPO2g==
+
+querystring@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.1.tgz#40d77615bb09d16902a85c3e38aa8b5ed761c2dd"
+  integrity sha512-wkvS7mL/JMugcup3/rMitHmd9ecIGd2lhFhK9N3UUQ450h66d1r3Y9nvXzQAW1Lq+wyx61k/1pfKS5KuKiyEbg==
 
 querystringify@^2.1.1:
   version "2.2.0"
@@ -9639,6 +9671,11 @@ source-map@^0.7.3:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.4.tgz#a9bbe705c9d8846f4e08ff6765acf0f1b0898656"
   integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
+
+spark-md5@^3.0.0:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/spark-md5/-/spark-md5-3.0.2.tgz#7952c4a30784347abcee73268e473b9c0167e3fc"
+  integrity sha512-wcFzz9cDfbuqe0FZzfi2or1sgyIrsDwmPwfZC4hiNidPdPINjeUwNfv5kldczoEAcjl9Y1L3SM7Uz2PUEQzxQw==
 
 spdx-correct@^3.0.0:
   version "3.1.1"
