@@ -25,6 +25,7 @@
 					})
 				const observable = qiniu.upload(file, null, token)
 				const subscription = observable.subscribe(observer)
+				
 			}
 	export default {
 		data() {
